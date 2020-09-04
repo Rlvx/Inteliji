@@ -19,8 +19,7 @@ public class TD2_Ex1 extends JFrame implements ActionListener{
         result = new JLabel("rien");
         button_copy.addActionListener(this);
         add(button_copy,BorderLayout.NORTH);
-        add(field,BorderLayout.CENTER);
-        add(result,BorderLayout.SOUTH);
+        add(field,BorderLayout.CENTER);add(result,BorderLayout.SOUTH);
 
         pack();
     }
