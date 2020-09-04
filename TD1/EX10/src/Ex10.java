@@ -4,7 +4,18 @@ import java.awt.event.*;
 public class Ex10 extends JFrame implements ActionListener{
     JButton button1,button2,button3,button4,button5;
     public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(this,e.getActionCommand());
+        if(e.getActionCommand().equals("Bouton 1")){
+            JOptionPane.showMessageDialog(this,"Bouton 1");
+        }else if(e.getActionCommand().equals("Bouton 2")){
+            JOptionPane.showMessageDialog(this,"Bouton 2");
+        }else if(e.getActionCommand().equals("Bouton 3")){
+            JOptionPane.showMessageDialog(this,"Bouton 3");
+        }else if(e.getActionCommand().equals("Bouton 4")){
+            JOptionPane.showMessageDialog(this,"Bouton 4");
+        }else{
+            JOptionPane.showMessageDialog(this,"Bouton 5");
+        }
+
     }
     Ex10(){
         setTitle("Yes");
