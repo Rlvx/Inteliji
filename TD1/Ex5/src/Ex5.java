@@ -1,10 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
 public class Ex5 extends JFrame{
-    JLabel nb_clic ;
+    JButton button1,button2 ;
     int number_clic = 0;
     static class Fenetres{
         JFrame fen ;
@@ -16,31 +15,24 @@ public class Ex5 extends JFrame{
             fen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         }
     }
-    class evenement_Clic implements MouseListener{
-        public void mouseClicked(MouseEvent e) {
-            if(number_clic<5){
-                number_clic++;
-                nb_clic.setText("Nombre de clics = "+number_clic);
+    class evenement_Clic implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            if(e.getSource()==button1){
+                JOptionPane.showMessageDialog(new JFrame(),"Bouton 1");
             }else{
-                nb_clic.setText("Fin");
+                JOptionPane.showMessageDialog(new JFrame(),"Bouton 2");
             }
-
-        }
-        public void mousePressed(MouseEvent e) {
-        }
-        public void mouseReleased(MouseEvent e) {
-        }
-        public void mouseEntered(MouseEvent e) {
-        }
-        public void mouseExited(MouseEvent e) {
         }
     }
     Ex5(){
         Fenetres ma_fenetre = new Fenetres("Test");
         ma_fenetre.fen.setLayout(new FlowLayout(FlowLayout.CENTER,50,50));
-        ma_fenetre.fen.addMouseListener(new evenement_Clic());
-        nb_clic = new JLabel("Nombre de clics = 0");
-        ma_fenetre.fen.add(nb_clic);
+        button1 = new JButton("Bouton 1");
+        button2 = new JButton("Bouton 2");
+        button1.addActionListener(new evenement_Clic());
+        button2.addActionListener(new evenement_Clic());
+        ma_fenetre.fen.add(button1);
+        ma_fenetre.fen.add(button2);
         pack();
     }
     public static void main(String[] args) {
