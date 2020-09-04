@@ -3,10 +3,10 @@ import java.awt.*;
 import java.awt.event.*;
 public class TD2_Ex1 extends JFrame implements ActionListener{
     JButton button_copy ;
-    JTextField champ ;
+    JTextField field ;
     JLabel result ;
     public void actionPerformed(ActionEvent e) {
-        result.setText(champ.getText());
+        result.setText(field.getText());
     }
     TD2_Ex1(){
         setTitle("Yes");
@@ -15,11 +15,11 @@ public class TD2_Ex1 extends JFrame implements ActionListener{
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
         button_copy = new JButton("Copier");
-        champ = new JTextField();
+        field = new JTextField();
         result = new JLabel("rien");
         button_copy.addActionListener(this);
         add(button_copy,BorderLayout.NORTH);
-        add(champ,BorderLayout.CENTER);
+        add(field,BorderLayout.CENTER);
         add(result,BorderLayout.SOUTH);
 
         pack();
