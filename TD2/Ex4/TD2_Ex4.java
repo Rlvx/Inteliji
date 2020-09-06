@@ -1,6 +1,15 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+class event_Window extends WindowAdapter{
+    public void windowClosing(WindowEvent e) {
+        System.out.println("Are you sure you wish to exit?");
+        int rep = JOptionPane.showConfirmDialog(new JFrame(), "Tu es sur de toi ?", "Quitter ce jeu de ****", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (rep == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }
+}
 public class TD2_Ex4 extends JFrame implements ActionListener{
     JButton tirage ;
     JTextField case1,case2,case3,case_result ;
@@ -34,6 +43,7 @@ public class TD2_Ex4 extends JFrame implements ActionListener{
         add(result);
         add(case_result);
         tirage.addActionListener(this);
+        addWindowListener(new event_Window());
         pack();
     }
     public static void main(String[] args) {
