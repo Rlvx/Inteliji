@@ -7,7 +7,7 @@ public class TD3_Ex3 {
         int case_actu = 0;
         boolean exite_déja ;
         try {
-            String chemin = "C:\\Users\\Rom\\Documents\\Inteliji\\TD3\\Ex3\\loto";
+            String chemin = "C:\\Users\\Rom\\Documents\\Inteliji\\TD3\\Partie_A\\Ex3\\loto";
             PrintWriter fichier = new PrintWriter(new FileWriter(chemin));
            while (case_actu!=6){
                 exite_déja = false;

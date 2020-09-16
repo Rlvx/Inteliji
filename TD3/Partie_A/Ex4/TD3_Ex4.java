@@ -5,7 +5,7 @@ public class TD3_Ex4 {
     public static void main(String[] args) {
         Scanner scan = new Scanner( System.in );
         try {
-            String chemin = "C:\\Users\\Rom\\Documents\\Inteliji\\TD3\\Ex4\\numbers";
+            String chemin = "C:\\Users\\Rom\\Documents\\Inteliji\\TD3\\Partie_A\\Ex4\\numbers";
             PrintWriter fichier = new PrintWriter(new FileWriter(chemin));
                 while (true){
                     System.out.println("Saisir un nombre :");
